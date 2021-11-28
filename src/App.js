@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
-import Posts from './components/Posts/Posts';
+import Home from './components/Home/Home';
+ import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReadMore from './components/ReadMore/ReadMore';
+import NoMatch from './components/NoMatch/NoMatch';
+
 
 function App() {
-	const [posts, setPosts] = useState([]);
-	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts')
-			.then((res) => res.json())
-			.then((data) => setPosts(data))
-			.catch((error) => console.log(error));
-	}, []);
+	
 
 	return (
-		<div>
-			{posts.map((post) => (
-				<Posts post={post}></Posts>
-			))}
-		</div>
+		
+		<BrowserRouter>
+		<Routes>
+		<Route path='/home' element={<Home />} />
+			{/* :id - URL Parameter (Dynamic URL Parameter) */}
+			<Route path='/post/:postId' element={<ReadMore />} />
+			<Route path='/' element={<Home />} />
+			<Route path='*' element={<NoMatch />} />
+		</Routes>
+	</BrowserRouter>
 	);
 }
 
