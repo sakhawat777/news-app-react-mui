@@ -6,22 +6,18 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link, useNavigate} from 'react-router-dom';
-import { border } from '@mui/system';
-
-
-
 
 
 const Posts = (props) => {
 	// console.log(props.post.id);
 	const {title, body, id} = props.post;
-	// // We used 'useNavigate' hook here to navigate the dynamic pieces of the URL.
-	// const navigate = useNavigate()
-	// const handleClick = (postId) => {
-	// 	const url = `/post/${postId}`;
-	// 	navigate(url);
+	// We used 'useNavigate' hook here to navigate the dynamic pieces of the URL.
+	 const navigate = useNavigate()
+	const handleClick = (postId) => {
+		const url = `/post/${postId}`;
+		navigate(url);
 		
-	// };
+	};
 	
 	return (
 
@@ -48,6 +44,7 @@ const Posts = (props) => {
 				</CardContent>
 				<CardActions>
 				<Link  to={`/post/${id}`}><Button size="small">Read More</Button></Link> 
+				<Button onClick={() => handleClick(id)} size="small">See More</Button>
 				</CardActions>
 				</Card>
 				
