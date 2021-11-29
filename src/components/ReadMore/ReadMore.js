@@ -25,24 +25,22 @@ const ReadMore = () => {
 	}, []);
 
 	return (
-		<div>
-			<Card sx={{ maxWidth: '100%' }}>
-				<CardMedia height='140' />
-				<CardContent>
-					<Typography gutterBottom variant='h5' component='div'>
-						Post Body Details:
-					</Typography>
-					<Typography variant='body2' color='text.secondary'>
-						{body}
-					</Typography>
-				</CardContent>
-				<CardActions>
-					<Link to={`/comments/${postId}`}>
-						<Button size='small'>Read Comments</Button>
-					</Link>
-				</CardActions>
-			</Card>
-		</div>
+		<Card style={{ margin: '50px' }} sx={{ maxWidth: '100%' }}>
+			<CardMedia height='140' />
+			<CardContent>
+				<Typography gutterBottom variant='h5' component='div'>
+					Post Body Details:
+				</Typography>
+				<Typography variant='body2' color='text.secondary'>
+					{body}
+				</Typography>
+			</CardContent>
+			<CardActions>
+				<Link to={`/comments/${postId}`}>
+					<Button size='small'>Read Comments</Button>
+				</Link>
+			</CardActions>
+		</Card>
 	);
 };
 

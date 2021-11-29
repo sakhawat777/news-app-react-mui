@@ -28,7 +28,7 @@ const Posts = (props) => {
 			
 		// </div>
 		  
-			 <Card sx={{ maxWidth: '100%' }}>
+			 <Card style={{margin: "50px"}} sx={{ maxWidth: '100%' }}>
 				<CardMedia
 					
 					height="140"
