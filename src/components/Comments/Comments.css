@@ -1,0 +1,14 @@
+.img {
+	float: left;
+	margin-left: 60px;
+	margin-top: 20px;
+	margin-right: 20px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	overflow: hidden;
+	background-color: lightblue;
+}
+h1 {
+	margin-left: 20px;
+}

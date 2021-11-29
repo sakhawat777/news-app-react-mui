@@ -7,6 +7,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { TableBody } from '@mui/material';
+import Comments from '../Comments/Comments';
+import { Link } from 'react-router-dom';
 
 const ReadMore = () => {
 	// We used 'useParams' hook here to access the dynamic pieces of the URL.
@@ -14,12 +16,14 @@ const ReadMore = () => {
 
 	const [id, setID] = useState({});
 	const { body } = id;
+
 	useEffect(() => {
 		const url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => setID(data));
 	}, []);
+
 	return (
 		<div>
 			<Card sx={{ maxWidth: '100%' }}>
@@ -33,8 +37,9 @@ const ReadMore = () => {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<Button size='small'>Share</Button>
-					<Button size='small'>Learn More</Button>
+					<Link to={`/comments/${postId}`}>
+						<Button size='small'>Read Comments</Button>
+					</Link>
 				</CardActions>
 			</Card>
 		</div>
