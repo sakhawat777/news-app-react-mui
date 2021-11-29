@@ -20,13 +20,15 @@ const Posts = (props) => {
 	};
 	
 	return (
-
+    
+		
 		// <div>
 		// 	<h3>{title}</h3>
 		// 	<p>{body}</p>
 		// 	<p><Link  to={`/post/${id}`}><button>Read More</button></Link></p>
 			
 		// </div>
+		
 		  
 			 <Card style={{margin: "50px"}} sx={{ maxWidth: '100%' }}>
 				<CardMedia
@@ -48,7 +50,7 @@ const Posts = (props) => {
 				</CardActions>
 				</Card>
 				
-		
+				
 	);
 };
 

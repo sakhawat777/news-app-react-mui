@@ -6,8 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { TableBody } from '@mui/material';
-import Comments from '../Comments/Comments';
 import { Link } from 'react-router-dom';
 
 const ReadMore = () => {

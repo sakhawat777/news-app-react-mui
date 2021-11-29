@@ -11,6 +11,7 @@ const Home = () => {
 	}, []);
 	return (
 		<div>
+			<h1>Facebook</h1>
 			<div>
 				{posts.map((post) => (
 					<Posts post={post} key={post.id}></Posts>
